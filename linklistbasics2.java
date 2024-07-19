@@ -25,6 +25,8 @@ public class linklistbasics2
 
       System.out.println(ob2.x);
       System.out.println(ob2.next.x);
+
+      System.out.println(ob3.x);
       
     }
 }
