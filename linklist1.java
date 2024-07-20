@@ -47,12 +47,12 @@ class link
       void disp()
       {
         if (start==null)
-        System.out.println("\nlist is empty");
+        System.out.print("\nlist is empty");
 
         else 
         {
             node t=start;
-            System.out.println("\nlist is : ");
+            System.out.print("\nlist is : ");
             while(t!=null)
             {
                 System.out.print(t.data+" ");
@@ -64,18 +64,18 @@ class link
       void getfirst()
       {
         if (start==null)
-        System.out.println("\nlist is empty");
+        System.out.print("\nlist is empty");
 
         else 
         {
-          System.out.println("\nfirst node data : "+start.data);
+          System.out.print("\nfirst node data : "+start.data);
         }
 
       }
       void getlast()
       {
         if (start==null)
-        System.out.println("\nlist is empty");
+        System.out.print("\nlist is empty");
 
         else 
         {
@@ -84,7 +84,7 @@ class link
           {
             t=t.next;
           }
-          System.out.println("\nlast node data : "+t.data);
+          System.out.print("\nlast node data : "+t.data);
         }
 
       }
@@ -117,8 +117,7 @@ class link
         int bnum=Integer.MIN_VALUE;
         if (start==null)
         {
-          System.out.println("\nlist is empty");
-          bnum=0;
+          bnum=Integer.MIN_VALUE;
         }
         else
         {
@@ -136,7 +135,7 @@ class link
       void removefirst()
       {
         if (start==null)
-        System.out.println("\nlist is empty");
+        System.out.print("\nlist is empty");
         else
         {
           node ptr=start;
@@ -147,7 +146,7 @@ class link
       void removelast()
       {
         if (start==null)
-        System.out.println("\nlist is empty");
+        System.out.print("\nlist is empty");
         else if(start.next==null)
         {
           start=null;
@@ -229,7 +228,7 @@ class link
       {
         int value=-1;
         if(p<0 || p>count()-1)
-        System.out.println("\ncan not add at given index");
+          value=-1;
 
         else
         {
@@ -282,37 +281,37 @@ public class linklist1
    {
     Scanner ob=new Scanner (System.in);
     int choice;
-    System.out.println("\n----------COMMANDS----------");
-    System.out.println("1. add value at last index-----void addlast(int x)");
-    System.out.println("2. add value at first index-----void addfirst(int x)");
-    System.out.println("3. display data of all nodes-----void disp()");
-    System.out.println("4. to get first element-----void getfirst()");
-    System.out.println("5. to get last element-----void getlast()");
-    System.out.println("6. to count no of nodes-----int count()");
-    System.out.println("7. to get sum of all nodes data-----int sum()");
-    System.out.println("8. get biggest element-----int big()");
-    System.out.println("9. remove first element-----void removefirst()");
-    System.out.println("10. to remove last element-----void removelast()");
-    System.out.println("11. to get index of an element-----int search(int item)");
-    System.out.println("12. reverse a linklist-----void reverse()");
-    System.out.println("13. add element at a index -----void addatindex(int p,int x)");
-    System.out.println("14. get element at a index -----int getatindex(int p)");
-    System.out.println("15. remove at index-----void removeatindex(int p)");
-    System.out.println("-------------END------------\n");
-    System.out.println("enter your choice : ");
+    System.out.print("\n--------------------COMMANDS--------------------");
+    System.out.print("\n1. add value at last index-----void addlast(int x)");
+    System.out.print("\n2. add value at first index-----void addfirst(int x)");
+    System.out.print("\n3. display data of all nodes-----void disp()");
+    System.out.print("\n4. to get first element-----void getfirst()");
+    System.out.print("\n5. to get last element-----void getlast()");
+    System.out.print("\n6. to count no of nodes-----int count()");
+    System.out.print("\n7. to get sum of all nodes data-----int sum()");
+    System.out.print("\n8. get biggest element-----int big()");
+    System.out.print("\n9. remove first element-----void removefirst()");
+    System.out.print("\n10. to remove last element-----void removelast()");
+    System.out.print("\n11. to get index of an element-----int search(int item)");
+    System.out.print("\n12. reverse a linklist-----void reverse()");
+    System.out.print("\n13. add element at a index -----void addatindex(int p,int x)");
+    System.out.print("\n14. get element at a index -----int getatindex(int p)");
+    System.out.print("\n15. remove at index-----void removeatindex(int p)");
+    System.out.print("\n-----------------------END----------------------");
+    System.out.print("\nenter your choice : ");
     choice=ob.nextInt();
 
     if (choice==1)
     {
         int val;
-        System.out.println("enter value");
+        System.out.print("\nenter value : ");
         val=ob.nextInt();
         ob1.addlast(val);
     }
     else if (choice==2)
     {
         int val;
-        System.out.println("enter value");
+        System.out.println("\nenter value :");
         val=ob.nextInt();
         ob1.addfirst(val);
     }
@@ -331,17 +330,20 @@ public class linklist1
     else if (choice==6)
     {
        int c=ob1.count();
-        System.out.println("\nno of nodes are : "+c);
+        System.out.print("\nno of nodes are : "+c);
         
     }
     else if (choice==7)
     {
         int s=ob1.sum();
-        System.out.println("\nsum of  elements is : "+s);
+        System.out.print("\nsum of  elements is : "+s);
     }
     else if (choice==8)
     {
        int b=ob1.big();
+       if (b==Integer.MIN_VALUE)
+        System.out.print("\nlist is empty");
+       else
         System.out.print("\nbiggest element is : "+b);
     }
     else if (choice==9)
@@ -357,7 +359,7 @@ public class linklist1
     else if (choice==11)
     {
       int val;
-      System.out.print("\nenter element to be saerched : ");
+      System.out.print("\nenter element to be searched : ");
       val=ob.nextInt();
        int p=ob1.search(val);
 
@@ -388,8 +390,11 @@ public class linklist1
       int val,pos;
       System.out.print("\nenter index : ");
       pos=ob.nextInt();
-      val=ob1.getatindex(pos);
-      System.out.print("\nvalue is  : "+val);
+     val=ob1.getatindex(pos);
+      if (val==-1)
+       System.out.print("\nindex not found ");
+       else
+       System.out.print("\nindex found value is : "+val);
         
     }
     else if (choice==15)
@@ -401,7 +406,7 @@ public class linklist1
       ob1.removeatindex(pos);
         
     }
-    System.out.print("\nwant to continue: true-1 / false-0");
+    System.out.print("\nwant to continue: true-1 / false-0 : ");
     ans=ob.nextInt();
    }
    }
