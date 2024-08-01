@@ -33,7 +33,7 @@ indexing
 11.singlylinklist.pdf
 
 12.doublylinklist.java
-13.
+13.doublylinklist.pdf
 
 14.circularlinklist.java
 15.circularlinkedlist.pdf
