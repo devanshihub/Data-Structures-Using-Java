@@ -41,5 +41,4 @@ indexing
 16.circulardoublylinkedlist.java
 17.circulardoublylinkedlist.pdf
 
-18.Data Structures and Algorithms Made Easy in Javabook_by_narasimha_Karumanchi.pdf
 
