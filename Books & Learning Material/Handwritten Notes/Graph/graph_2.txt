@@ -1,0 +1,124 @@
+Undirected Graph by Adjancy Matrix
+----------------------------------------
+package Graph;
+
+public class undirected {
+    public static void main(String[] args) {
+        int n=5;
+        int edge[][]={{1,2},{2,3},{2,4},{3,4},{4,5},{1,5}};
+        int i,j;
+        int mat[][]= new int[n+1][n+1];
+        for(i=0; i<edge.length; i++)
+        {
+            int x=edge[i][0];
+            int y=edge[i][1];
+            mat[x][y]=1;
+            mat[y][x]=1;
+        }
+        System.out.println("Adjacency Representation:");
+        for(i=1; i<n+1; i++)
+        {
+            for(j=1; j<n+1; j++)
+            {
+                System.out.print(mat[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+    
+}
+
+---------------------
+directed Graph by Adjancy Matrix
+----------------------------------------
+package Graph;
+
+public class directed {
+    public static void main(String[] args) {
+        int n=5;
+        int edge[][]={{1,2},{2,3},{2,4},{3,4},{4,5},{1,5}};
+        int i,j;
+        int mat[][]= new int[n+1][n+1];
+        for(i=0; i<edge.length; i++)
+        {
+            int x=edge[i][0];
+            int y=edge[i][1];
+            mat[x][y]=1;
+          
+        }
+        System.out.println("Adjacency Representation:");
+        for(i=1; i<n+1; i++)
+        {
+            for(j=1; j<n+1; j++)
+            {
+                System.out.print(mat[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+    
+}
+
+---------------------
+Weighted Undirected Graph
+----------------------------
+Weighted Undirected Graph by Adjancy Matrix
+----------------------------------------
+package Graph;
+
+public class wundirected {
+    public static void main(String[] args) {
+        int n=5;
+        int edge[][]={{1,2,15},{2,3,25},{2,4,8},{3,4,11},{4,5,8},{1,5,14}};
+        int i,j;
+        int mat[][]= new int[n+1][n+1];
+        for(i=0; i<edge.length; i++)
+        {
+            int x=edge[i][0];
+            int y=edge[i][1];
+            mat[x][y]=[i][2];
+            mat[y][x]=[i][2];
+        }
+        System.out.println("Adjacency Representation:");
+        for(i=1; i<n+1; i++)
+        {
+            for(j=1; j<n+1; j++)
+            {
+                System.out.print(mat[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+    
+}
+
+---------------------
+Weighted directed Graph by Adjancy Matrix
+----------------------------------------
+package Graph;
+
+public class wundirected {
+    public static void main(String[] args) {
+        int n=5;
+        int edge[][]={{1,2,15},{2,3,25},{2,4,8},{3,4,11},{4,5,8},{1,5,14}};
+        int i,j;
+        int mat[][]= new int[n+1][n+1];
+        for(i=0; i<edge.length; i++)
+        {
+            int x=edge[i][0];
+            int y=edge[i][1];
+            mat[x][y]=[i][2];
+
+        }
+        System.out.println("Adjacency Representation:");
+        for(i=1; i<n+1; i++)
+        {
+            for(j=1; j<n+1; j++)
+            {
+                System.out.print(mat[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+    
+}
